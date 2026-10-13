@@ -1,0 +1,5 @@
+"event_id","timestamp_utc","severity","account","alert_name","linked_record","status","analyst_note"
+"SOC-801","2026-09-23T09:16:22Z","medium","NORTHBRIDGE\jreed.ext","Expired contractor remote access","AUTH-404","opened","Account HR end date was two days before success"
+"SOC-802","2026-09-23T09:18:52Z","low","NORTHBRIDGE\msilva","Authorized admin activity","AUTH-405","benign","Approved by CHG-333"
+"SOC-803","2026-09-23T09:20:16Z","medium","NORTHBRIDGE\jreed.ext","Disable stale credential","DIR-306","in_progress","Preserve log exports and revoke session"
+"SOC-804","2026-09-23T10:12:19Z","medium","NORTHBRIDGE\jreed.ext","Closure verification","DIR-308","closed","Directory disabled and later authentication denied"

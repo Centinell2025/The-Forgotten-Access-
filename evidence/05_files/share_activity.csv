@@ -1,0 +1,7 @@
+"event_id","timestamp_utc","account","session_id","host","path","action","result","notes"
+"FILE-601","2026-09-23T09:12:05Z","NORTHBRIDGE\jreed.ext","VPN-900","nb-fs-002","\\nb-fs-002\Shared\Contracts\2026_Renewal_DUMMY.pdf","read","success","Dummy synthetic contract"
+"FILE-602","2026-09-23T09:13:02Z","NORTHBRIDGE\jreed.ext","VPN-900","nb-fs-002","\\nb-fs-002\Shared\Contracts\Vendor_Roster_DUMMY.csv","read","success","Dummy training roster"
+"FILE-603","2026-09-23T09:15:30Z","NORTHBRIDGE\msilva","VPN-901","nb-fs-002","\\nb-fs-002\IT\Monitoring\Healthcheck_DUMMY.txt","read","success","Approved maintenance reference"
+"FILE-604","2026-09-23T09:16:12Z","NORTHBRIDGE\jreed.ext","VPN-900","nb-fs-002","\\nb-fs-002\Restricted\Payroll_DUMMY.csv","read","denied","ACL denied; do not report this file as viewed"
+"FILE-605","2026-09-23T09:16:45Z","NORTHBRIDGE\jreed.ext","VPN-900","nb-fs-002","\\nb-fs-002\Shared\Contracts\Archive_DUMMY.zip","write","denied","No archive creation proven"
+"FILE-606","2026-09-23T09:18:17Z","NORTHBRIDGE\msilva","VPN-901","nb-fs-002","\\nb-fs-002\IT\Monitoring\Healthcheck_DUMMY.txt","close","success","Maintenance activity ended"

@@ -1,0 +1,13 @@
+name: Verify Forgotten Access student package
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate training scenarios and encrypted student ZIP
+        run: python3 tools/verify_student.py
+      - name: Print case hashes
+        run: python3 tools/checksums.py

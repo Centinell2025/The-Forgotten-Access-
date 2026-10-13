@@ -1,0 +1,5 @@
+"event_id","timestamp_utc","session_id","account","host","domain","method","path","outbound_bytes","policy_result","notes"
+"NET-701","2026-09-23T09:14:55Z","VPN-900","NORTHBRIDGE\jreed.ext","NB-REMOTE-021","drive-sync.review.test","POST","/upload","0","blocked","Proxy denied before upload; zero transmitted body bytes in recorded event"
+"NET-702","2026-09-23T09:17:50Z","VPN-901","NORTHBRIDGE\msilva","NB-ADMIN-008","health.northbridge.internal.test","GET","/status","124","allowed","Approved monitoring"
+"NET-703","2026-09-23T09:18:05Z","VPN-900","NORTHBRIDGE\jreed.ext","NB-REMOTE-021","docs.northbridge.internal.test","GET","/home","384","allowed","Ordinary internal page; no known file upload"
+"NET-704","2026-09-23T09:19:40Z","VPN-900","NORTHBRIDGE\jreed.ext","NB-REMOTE-021","drive-sync.review.test","POST","/upload","0","blocked","Second denied attempt; contents unavailable"

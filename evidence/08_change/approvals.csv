@@ -1,0 +1,4 @@
+"event_id","timestamp_utc","ticket","account","work","status","valid_window_utc","notes"
+"CHG-901","2026-09-22T14:00:00Z","CHG-333","NORTHBRIDGE\msilva","Health monitoring on nb-fs-002","approved","2026-09-23T09:00:00Z to 2026-09-23T09:45:00Z","Authorized system maintenance"
+"CHG-902","2026-09-22T14:15:00Z","OFF-204","NORTHBRIDGE\jreed.ext","Contractor account deactivation","required","after 2026-09-21T17:00:00Z","Offboard immediately; no remote access exception"
+"CHG-903","2026-09-23T09:20:00Z","IR-118","NORTHBRIDGE\jreed.ext","Incident response account disable","authorized","2026-09-23T09:20:00Z onwards","SOC containment after preservation"

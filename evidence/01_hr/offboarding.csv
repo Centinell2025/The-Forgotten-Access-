@@ -1,0 +1,5 @@
+"event_id","timestamp_utc","account","end_date_utc","ticket","requested_action","status","notes"
+"HR-201","2026-09-21T16:10:00Z","NORTHBRIDGE\jreed.ext","2026-09-21T17:00:00Z","OFF-204","disable_account","submitted","Contractor assignment ended; access withdrawal required"
+"HR-202","2026-09-21T16:12:00Z","NORTHBRIDGE\msilva","not_applicable","CHG-333","retain_access","active","Infrastructure employee approved for maintenance"
+"HR-203","2026-09-22T08:15:00Z","NORTHBRIDGE\pcole.ext","2026-10-10T17:00:00Z","OFF-205","no_change","active","Second contractor remains authorized"
+"HR-204","2026-09-23T07:45:00Z","NORTHBRIDGE\jreed.ext","2026-09-21T17:00:00Z","OFF-204","verify_disable","escalated","HR escalated pending deactivation"

@@ -1,0 +1,7 @@
+"event_id","timestamp_utc","session_id","account","gateway","device","action","status","notes"
+"VPN-501","2026-09-23T09:04:15Z","VPN-900","NORTHBRIDGE\jreed.ext","vpn-gw-02","NB-REMOTE-021","session_established","active","Account outside approved employment window"
+"VPN-502","2026-09-23T09:07:16Z","VPN-901","NORTHBRIDGE\msilva","vpn-gw-02","NB-ADMIN-008","session_established","active","Authorized CHG-333"
+"VPN-503","2026-09-23T09:12:03Z","VPN-900","NORTHBRIDGE\jreed.ext","vpn-gw-02","NB-REMOTE-021","file_share_route","active","Route to nb-fs-002 observed"
+"VPN-504","2026-09-23T09:15:20Z","VPN-901","NORTHBRIDGE\msilva","vpn-gw-02","NB-ADMIN-008","file_share_route","active","Routine service check"
+"VPN-505","2026-09-23T09:24:43Z","VPN-900","NORTHBRIDGE\jreed.ext","vpn-gw-02","NB-REMOTE-021","session_closed","closed","SOC manually revoked session"
+"VPN-506","2026-09-23T09:30:40Z","VPN-901","NORTHBRIDGE\msilva","vpn-gw-02","NB-ADMIN-008","session_closed","closed","Maintenance complete"
