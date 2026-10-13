@@ -1,13 +1,32 @@
-name: Verify Forgotten Access student package
-on: [push, workflow_dispatch]
+name: Build and verify HTB Sherlock ZIP
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'downloads/**'
+  workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
-  integrity:
+  build-package:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate training scenarios and encrypted student ZIP
+      - name: Rebuild encrypted student ZIP with all current source files
+        run: |
+          rm -f downloads/CENTINELL-The-Forgotten-Access-SHERLOCK-STUDENT.zip
+          mkdir -p downloads
+          zip -D -X -q -r -P hackthebox downloads/CENTINELL-The-Forgotten-Access-SHERLOCK-STUDENT.zip README.md evidence docs PRACTICAL_LABS tools
+      - name: Verify 10 main questions, 10 optional labs and password parity
         run: python3 tools/verify_student.py
-      - name: Print case hashes
+      - name: Print exhibit hashes
         run: python3 tools/checksums.py
+      - name: Commit validated encrypted student download
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/CENTINELL-The-Forgotten-Access-SHERLOCK-STUDENT.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Rebuild validated encrypted Sherlock student ZIP [skip package]"
+            git push
+          fi

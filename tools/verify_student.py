@@ -17,7 +17,7 @@ for file in sources:
         assert ident not in ids,ident
         ids.add(ident)
         assert datetime.fromisoformat(r["timestamp_utc"].replace("Z","+00:00")).utcoffset().total_seconds()==0
-        assert not re.search(r"(?<![\\d.])(?:\\d{1,3}\\.){3}\\d{1,3}(?![\\d.])"," ".join(r.values()))
+        assert not re.search(r"(?<![0-9.])(?:[0-9]{1,3}[.]){3}[0-9]{1,3}(?![0-9.])"," ".join(r.values()))
 labs=sorted((root/"PRACTICAL_LABS").glob("*/events.csv"))
 assert len(labs)==10
 for path in labs:
@@ -25,7 +25,7 @@ for path in labs:
     assert len(rows)==10,path
     assert "## Investigative questions" in (path.parent/"CASE_AND_EXERCISE.md").read_text(encoding="utf-8")
 guide=(root/"docs/INVESTIGATION_QUESTIONS.md").read_text(encoding="utf-8")
-assert len(re.findall(r"^\\d+\\. ",guide,re.MULTILINE))==10
+assert len([line for line in guide.splitlines() if line.startswith(tuple(f"{n}. " for n in range(1,11)))])==10
 for argv in (["--summary"],["--timeline","--limit","5"],["--session","VPN-900"],["--lab","01"]):
     p=subprocess.run([sys.executable,str(root/"tools/triage.py"),*argv],capture_output=True,text=True,cwd=root)
     assert p.returncode==0,p.stderr
